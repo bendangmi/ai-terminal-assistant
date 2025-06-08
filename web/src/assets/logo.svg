@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#409EFF"/>
+            <stop offset="100%" style="stop-color:#67C23A"/>
+        </linearGradient>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <rect width="200" height="200" rx="25" fill="url(#gradient)" opacity="0.1"/>
+        <path d="M40 60 L160 60" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+        <path d="M60 90 L140 90" stroke="currentColor" stroke-width="4" stroke-linecap="round" opacity="0.8"/>
+        <path d="M80 120 L120 120" stroke="currentColor" stroke-width="4" stroke-linecap="round" opacity="0.6"/>
+        <text x="100" y="160" font-family="monospace" font-size="24" fill="currentColor" text-anchor="middle">AI Terminal</text>
+    </g>
+</svg> 

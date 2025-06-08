@@ -1,0 +1,100 @@
+/* 页面过渡动画 */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+/* 滑动过渡 */
+.slide-fade-enter-active {
+  transition: all 0.3s ease-out;
+}
+
+.slide-fade-leave-active {
+  transition: all 0.3s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+  transform: translateX(20px);
+  opacity: 0;
+}
+
+/* 缩放过渡 */
+.scale-enter-active,
+.scale-leave-active {
+  transition: all 0.3s ease;
+}
+
+.scale-enter-from,
+.scale-leave-to {
+  transform: scale(0.9);
+  opacity: 0;
+}
+
+/* 列表过渡 */
+.list-enter-active,
+.list-leave-active {
+  transition: all 0.3s ease;
+}
+
+.list-enter-from,
+.list-leave-to {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+/* 路由过渡 */
+.route-enter-active,
+.route-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.route-enter-from,
+.route-leave-to {
+  opacity: 0;
+}
+
+/* 抽屉过渡 */
+.drawer-enter-active,
+.drawer-leave-active {
+  transition: transform 0.3s ease-in-out;
+}
+
+.drawer-enter-from,
+.drawer-leave-to {
+  transform: translateX(100%);
+}
+
+/* 菜单折叠过渡 */
+.collapse-transition {
+  transition: 0.3s height ease-in-out, 0.3s padding-top ease-in-out, 0.3s padding-bottom ease-in-out;
+}
+
+/* 淡入上移 */
+.fade-up-enter-active,
+.fade-up-leave-active {
+  transition: all 0.3s ease-out;
+}
+
+.fade-up-enter-from,
+.fade-up-leave-to {
+  transform: translateY(20px);
+  opacity: 0;
+}
+
+/* 淡入下移 */
+.fade-down-enter-active,
+.fade-down-leave-active {
+  transition: all 0.3s ease-out;
+}
+
+.fade-down-enter-from,
+.fade-down-leave-to {
+  transform: translateY(-20px);
+  opacity: 0;
+} 

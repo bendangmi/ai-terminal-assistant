@@ -1,0 +1,31 @@
+ai:
+  apiKey: ''
+  api_key: sk-d375397d6670439498ad046fe9208e0e
+  deepseek:
+    model: deepseek-coder
+    api_key: sk-d375397d6670439498ad046fe9208e0e
+    temperature: 0.7
+  model: gpt-3.5-turbo
+  provider: deepseek
+  temperature: 0.7
+system:
+  autoStart: false
+  logLevel: debug
+  updateInterval: 5
+terminal:
+  fontFamily: Consolas
+  fontSize: 14
+  historySize: 100
+  theme: light
+general:
+  history_size: 5
+  debug_mode: false
+  auto_start: false
+logging:
+  level: INFO
+ui:
+  terminal:
+    font_size: 14
+    font_family: Consolas
+    theme: dark
+    history_size: 100

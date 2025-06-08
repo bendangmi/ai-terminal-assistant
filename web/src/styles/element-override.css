@@ -1,0 +1,219 @@
+/* Element Plus 样式覆盖 */
+
+/* Card 样式 */
+.el-card {
+  --el-card-border-color: var(--border-color-light);
+  --el-card-border-radius: var(--radius-lg);
+  --el-card-padding: var(--spacing-4);
+  border: 1px solid var(--glass-border);
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-backdrop-filter);
+  -webkit-backdrop-filter: var(--glass-backdrop-filter);
+}
+
+/* Menu 样式 */
+.el-menu {
+  --el-menu-bg-color: transparent;
+  --el-menu-text-color: var(--text-color);
+  --el-menu-hover-bg-color: rgba(255, 255, 255, 0.1);
+  --el-menu-active-color: var(--primary-color);
+  border-right: none !important;
+}
+
+.el-menu-item.is-active {
+  background: var(--el-menu-hover-bg-color);
+}
+
+/* Button 样式 */
+.el-button {
+  --el-button-border-radius: var(--radius-md);
+  --el-button-hover-text-color: var(--primary-color);
+  --el-button-hover-bg-color: rgba(64, 158, 255, 0.1);
+  --el-button-hover-border-color: var(--primary-color);
+}
+
+/* Input 样式 */
+.el-input {
+  --el-input-border-radius: var(--radius-md);
+  --el-input-hover-border-color: var(--primary-color);
+  --el-input-focus-border-color: var(--primary-color);
+}
+
+/* Select 样式 */
+.el-select {
+  --el-select-border-color-hover: var(--primary-color);
+  --el-select-input-focus-border-color: var(--primary-color);
+}
+
+/* Table 样式 */
+.el-table {
+  --el-table-border-color: var(--border-color-light);
+  --el-table-header-bg-color: var(--glass-bg);
+  --el-table-row-hover-bg-color: rgba(255, 255, 255, 0.1);
+  background: transparent;
+}
+
+.el-table th.el-table__cell {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-backdrop-filter);
+  -webkit-backdrop-filter: var(--glass-backdrop-filter);
+}
+
+/* Dialog 样式 */
+.el-dialog {
+  --el-dialog-border-radius: var(--radius-lg);
+  --el-dialog-padding-primary: var(--spacing-6);
+  border: 1px solid var(--glass-border);
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-backdrop-filter);
+  -webkit-backdrop-filter: var(--glass-backdrop-filter);
+}
+
+/* Message 样式 */
+.el-message {
+  --el-message-border-radius: var(--radius-lg);
+  --el-message-padding: var(--spacing-3) var(--spacing-4);
+  border: 1px solid var(--glass-border);
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-backdrop-filter);
+  -webkit-backdrop-filter: var(--glass-backdrop-filter);
+}
+
+/* Notification 样式 */
+.el-notification {
+  --el-notification-border-radius: var(--radius-lg);
+  border: 1px solid var(--glass-border);
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-backdrop-filter);
+  -webkit-backdrop-filter: var(--glass-backdrop-filter);
+}
+
+/* Form 样式 */
+.el-form-item {
+  --el-form-label-font-size: var(--font-size-base);
+}
+
+/* Tabs 样式 */
+.el-tabs {
+  --el-tabs-header-height: 40px;
+}
+
+.el-tabs__item {
+  --el-tabs-font-size: var(--font-size-base);
+}
+
+/* 按钮样式 */
+.el-button--primary {
+  --el-button-hover-bg-color: var(--el-color-primary-light-3);
+  --el-button-hover-border-color: var(--el-color-primary-light-3);
+}
+
+/* 菜单样式 */
+.el-menu-item:hover {
+  background-color: var(--el-color-primary-light-9);
+}
+
+/* 表单样式 */
+.el-input__wrapper,
+.el-textarea__wrapper {
+  box-shadow: 0 0 0 1px var(--el-border-color) inset;
+}
+
+.el-input__wrapper:hover,
+.el-textarea__wrapper:hover {
+  box-shadow: 0 0 0 1px var(--el-color-primary) inset;
+}
+
+.el-input__wrapper.is-focus,
+.el-textarea__wrapper.is-focus {
+  box-shadow: 0 0 0 1px var(--el-color-primary) inset !important;
+}
+
+/* 下拉菜单样式 */
+.el-dropdown-menu {
+  --el-dropdown-menuItem-hover-fill: var(--el-color-primary-light-9);
+  --el-dropdown-menuItem-hover-color: var(--el-color-primary);
+}
+
+/* 标签页样式 */
+.el-tabs__item.is-active {
+  color: var(--el-color-primary);
+}
+
+.el-tabs__active-bar {
+  background-color: var(--el-color-primary);
+}
+
+/* 分页样式 */
+.el-pagination.is-background .el-pager li:not(.disabled).active {
+  background-color: var(--el-color-primary);
+}
+
+/* 树形控件样式 */
+.el-tree-node__content:hover {
+  background-color: var(--el-color-primary-light-9);
+}
+
+.el-tree-node.is-current > .el-tree-node__content {
+  background-color: var(--el-color-primary-light-9);
+  color: var(--el-color-primary);
+}
+
+/* 滑块样式 */
+.el-slider__runway {
+  background-color: var(--el-border-color-light);
+}
+
+.el-slider__bar {
+  background-color: var(--el-color-primary);
+}
+
+/* 开关样式 */
+.el-switch.is-checked .el-switch__core {
+  border-color: var(--el-color-primary);
+  background-color: var(--el-color-primary);
+}
+
+/* 日期选择器样式 */
+.el-date-table td.current:not(.disabled) span {
+  background-color: var(--el-color-primary);
+}
+
+/* 加载样式 */
+.el-loading-spinner .path {
+  stroke: var(--el-color-primary);
+}
+
+/* 进度条样式 */
+.el-progress-bar__inner {
+  background-color: var(--el-color-primary);
+}
+
+/* 暗色主题适配 */
+[data-theme='dark'] {
+  --el-border-color: var(--el-border-color-darker);
+  --el-border-color-light: var(--el-border-color-dark);
+  --el-text-color-primary: var(--el-color-white);
+  --el-text-color-regular: var(--el-color-gray);
+  --el-bg-color: var(--el-color-black);
+  --el-bg-color-overlay: var(--el-color-black-light);
+  
+  .el-card,
+  .el-dialog,
+  .el-dropdown-menu,
+  .el-menu {
+    background-color: var(--el-bg-color-overlay);
+  }
+  
+  .el-table {
+    --el-table-bg-color: var(--el-bg-color);
+    --el-table-tr-bg-color: var(--el-bg-color);
+    --el-table-header-bg-color: var(--el-bg-color-overlay);
+    color: var(--el-text-color-primary);
+  }
+  
+  .el-input__wrapper,
+  .el-textarea__wrapper {
+    background-color: var(--el-bg-color-overlay);
+  }
+} 

@@ -1,0 +1,78 @@
+# AI Terminal Assistant 默认配置文件
+
+# 常规设置
+general:
+  debug_mode: false
+  history_size: 100
+  working_directory: null  # 默认使用当前目录
+
+# AI设置
+ai:
+  provider: deepseek  # 默认使用OpenAI
+  max_history_length: 10
+  max_context_length: 4000
+  
+  # OpenAI配置
+  openai:
+    model: gpt-4
+    temperature: 0.7
+    max_tokens: 1000
+    top_p: 1.0
+    frequency_penalty: 0.0
+    presence_penalty: 0.0
+  
+  # DeepSeek配置
+  deepseek:
+    model: deepseek-chat
+    temperature: 0.7
+    max_tokens: 1000
+    top_p: 1.0
+    frequency_penalty: 0.0
+    presence_penalty: 0.0
+
+# 安全设置
+security:
+  require_confirmation: true
+  dangerous_commands:
+    - rm -rf
+    - mkfs
+    - dd
+    - shutdown
+    - reboot
+    - halt
+    - poweroff
+    - sudo
+    - su
+  sensitive_directories:
+    - /etc
+    - /var
+    - /usr
+    - /bin
+    - /sbin
+    - /boot
+    - /root
+    - /proc
+    - /sys
+    - /dev
+    - C:\\Windows
+    - C:\\Program Files
+    - C:\\Program Files (x86)
+
+# UI设置
+ui:
+  theme: monokai
+  show_welcome: true
+  show_thinking: true
+  command_timeout: 30
+  colors:
+    success: green
+    error: red
+    warning: yellow
+    info: blue
+
+# 日志设置
+logging:
+  level: INFO
+  file: null  # 默认输出到控制台
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  date_format: "%Y-%m-%d %H:%M:%S" 

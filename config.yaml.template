@@ -1,0 +1,72 @@
+# AI终端助手配置文件模板
+# 将此文件复制为config.yaml并根据需要修改
+
+version: "1.0.0"
+
+general:
+  history_size: 20  # 历史记录大小
+  debug_mode: false  # 调试模式
+  working_directory: null  # 工作目录，null表示使用当前目录
+
+ai:
+  provider: "openai"  # 主要AI提供商
+  fallback_provider: null  # 故障转移提供商
+  max_history_length: 100  # 最大历史记录长度
+  max_context_length: 4000  # 最大上下文长度
+  
+  # OpenAI配置
+  openai:
+    model: "gpt-4"  # 模型名称
+    temperature: 0.7  # 温度参数
+    max_tokens: 2000  # 最大令牌数
+    api_key: null  # API密钥（建议使用环境变量）
+    api_key_env: "OPENAI_API_KEY"  # API密钥环境变量名
+    models:  # 支持的模型列表
+      - "gpt-4"
+      - "gpt-4-turbo"
+      - "gpt-3.5-turbo"
+  
+  # DeepSeek配置
+  deepseek:
+    model: "deepseek-chat"  # 模型名称
+    temperature: 0.7  # 温度参数
+    max_tokens: 2000  # 最大令牌数
+    api_key: null  # API密钥（建议使用环境变量）
+    api_key_env: "DEEPSEEK_API_KEY"  # API密钥环境变量名
+    models:  # 支持的模型列表
+      - "deepseek-chat"
+      - "deepseek-coder"
+
+security:
+  # 危险命令列表
+  dangerous_commands:
+    - "rm -rf /"
+    - "rm -rf /*"
+    - "dd if=/dev/zero of=/dev/sda"
+    - "> /etc/passwd"
+    - "chmod -R 777 /"
+    - "mkfs.ext4 /dev/sda"
+  
+  # 敏感目录列表
+  sensitive_directories:
+    - "/etc"
+    - "/var"
+    - "/usr"
+    - "/boot"
+    - "/root"
+  
+  require_confirmation: true  # 是否需要确认危险命令
+
+ui:
+  theme: "default"  # 界面主题
+  colors:  # 界面颜色
+    success: "green"
+    error: "red"
+    warning: "yellow"
+    info: "blue"
+  show_welcome: true  # 是否显示欢迎信息
+
+logging:
+  level: "INFO"  # 日志级别
+  file: null  # 日志文件路径，null表示输出到控制台
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"  # 日志格式 

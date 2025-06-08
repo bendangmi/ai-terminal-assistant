@@ -1,0 +1,356 @@
+/* 暗色主题变量 */
+[data-theme='dark'] {
+  /* 主色调 */
+  --primary-color: #00b4ff;
+  --primary-color-hover: #33c5ff;
+  --primary-color-active: #0090cc;
+  --primary-color-outline: rgba(0, 180, 255, 0.2);
+
+  /* 背景色 */
+  --bg-primary: #141414;
+  --bg-secondary: #1f1f1f;
+  --bg-tertiary: #262626;
+  --bg-elevated: #2a2a2a;
+  --bg-overlay: rgba(0, 0, 0, 0.8);
+
+  /* 文字颜色 */
+  --text-primary: #ffffff;
+  --text-secondary: rgba(255, 255, 255, 0.85);
+  --text-tertiary: rgba(255, 255, 255, 0.65);
+  --text-disabled: rgba(255, 255, 255, 0.45);
+
+  /* 边框颜色 */
+  --border-primary: #303030;
+  --border-secondary: #434343;
+  --border-tertiary: #1f1f1f;
+
+  /* 功能色 */
+  --success-color: #52c41a;
+  --warning-color: #faad14;
+  --error-color: #ff4d4f;
+  --info-color: #00b4ff;
+
+  /* 阴影 */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.5);
+  --shadow-xl: 0 12px 24px rgba(0, 0, 0, 0.6);
+
+  /* 毛玻璃效果 */
+  --glass-bg: rgba(31, 31, 31, 0.8);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+
+  /* 渐变 */
+  --gradient-primary: linear-gradient(135deg, #00b4ff 0%, #0090cc 100%);
+  --gradient-success: linear-gradient(135deg, #52c41a 0%, #3f9714 100%);
+  --gradient-warning: linear-gradient(135deg, #faad14 0%, #d48806 100%);
+  --gradient-error: linear-gradient(135deg, #ff4d4f 0%, #cf1322 100%);
+
+  /* 科技感元素 */
+  --tech-line: rgba(0, 180, 255, 0.3);
+  --tech-glow: 0 0 10px rgba(0, 180, 255, 0.5);
+  --tech-pulse: rgba(0, 180, 255, 0.2);
+}
+
+/* 科技感动画 */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 var(--tech-pulse);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(0, 180, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 180, 255, 0);
+  }
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: var(--tech-glow);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(0, 180, 255, 0.8);
+  }
+  100% {
+    box-shadow: var(--tech-glow);
+  }
+}
+
+/* 暗色主题样式覆盖 */
+[data-theme='dark'] {
+  /* 卡片样式 */
+  .el-card {
+    background-color: var(--bg-secondary);
+    border-color: var(--border-primary);
+    box-shadow: var(--shadow-md);
+  }
+
+  .el-card:hover {
+    border-color: var(--primary-color);
+    box-shadow: var(--tech-glow);
+  }
+
+  /* 按钮样式 */
+  .el-button {
+    &.el-button--primary {
+      background: var(--gradient-primary);
+      border: none;
+      
+      &:hover {
+        opacity: 0.9;
+        animation: pulse 1.5s infinite;
+      }
+    }
+  }
+
+  /* 输入框样式 */
+  .el-input__wrapper {
+    background-color: var(--bg-tertiary);
+    box-shadow: none;
+    border: 1px solid var(--border-primary);
+
+    &:hover, &.is-focus {
+      border-color: var(--primary-color);
+      box-shadow: var(--tech-glow);
+    }
+  }
+
+  /* 菜单样式 */
+  .el-menu {
+    background-color: var(--bg-secondary);
+    border-right: 1px solid var(--border-primary);
+
+    .el-menu-item {
+      &:hover {
+        background-color: var(--bg-tertiary);
+      }
+
+      &.is-active {
+        background: var(--gradient-primary);
+        &::before {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 0;
+          bottom: 0;
+          width: 3px;
+          background: var(--primary-color);
+          box-shadow: var(--tech-glow);
+        }
+      }
+    }
+  }
+
+  /* 表格样式 */
+  .el-table {
+    background-color: var(--bg-secondary);
+    
+    th.el-table__cell {
+      background-color: var(--bg-tertiary);
+    }
+    
+    .el-table__row:hover > td.el-table__cell {
+      background-color: var(--bg-elevated);
+    }
+  }
+
+  /* 对话框样式 */
+  .el-dialog {
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-primary);
+    box-shadow: var(--shadow-lg);
+
+    .el-dialog__header {
+      border-bottom: 1px solid var(--border-primary);
+    }
+  }
+
+  /* 下拉菜单样式 */
+  .el-dropdown-menu {
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-primary);
+    box-shadow: var(--shadow-lg);
+
+    .el-dropdown-menu__item:hover {
+      background-color: var(--bg-tertiary);
+    }
+  }
+
+  /* 标签页样式 */
+  .el-tabs__item {
+    color: var(--text-secondary);
+    
+    &.is-active {
+      color: var(--primary-color);
+    }
+  }
+
+  .el-tabs__active-bar {
+    background-color: var(--primary-color);
+    box-shadow: var(--tech-glow);
+  }
+
+  /* 分页样式 */
+  .el-pagination {
+    button:not(:disabled):hover {
+      color: var(--primary-color);
+    }
+
+    .el-pager li:not(.disabled).active {
+      background-color: var(--primary-color);
+      box-shadow: var(--tech-glow);
+    }
+  }
+
+  /* 滚动条样式 */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--border-secondary);
+    border-radius: 3px;
+    
+    &:hover {
+      background: var(--primary-color);
+    }
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--bg-tertiary);
+  }
+}
+
+/* 毛玻璃效果组件 */
+.glass-effect {
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+}
+
+/* 科技感边框 */
+.tech-border {
+  position: relative;
+  border: 1px solid var(--tech-line);
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    right: -1px;
+    bottom: -1px;
+    border: 1px solid var(--primary-color);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  &:hover::before {
+    opacity: 1;
+    animation: glow 1.5s infinite;
+  }
+}
+
+/* 科技感装饰线 */
+.tech-line {
+  position: relative;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 1px;
+    background: var(--tech-line);
+    box-shadow: var(--tech-glow);
+  }
+}
+
+/* 暗色主题全局样式 */
+[data-theme='dark'] {
+  /* 背景和文本 */
+  background-color: var(--background-color);
+  color: var(--text-color);
+
+  /* Element Plus 组件覆盖 */
+  .el-card {
+    background-color: var(--card-bg);
+    border-color: var(--card-border);
+    color: var(--text-color);
+  }
+
+  .el-card__header {
+    border-bottom-color: var(--card-border);
+  }
+
+  .el-button {
+    --el-button-hover-bg-color: var(--el-color-primary-light-3);
+    --el-button-hover-text-color: var(--el-color-white);
+  }
+
+  .el-input__wrapper {
+    background-color: var(--background-color-light);
+    box-shadow: 0 0 0 1px var(--border-color) inset;
+  }
+
+  .el-input__inner {
+    color: var(--text-color);
+    &::placeholder {
+      color: var(--text-color-placeholder);
+    }
+  }
+
+  .el-tag {
+    background-color: var(--glass-bg);
+    border-color: var(--glass-border);
+    color: var(--text-color);
+  }
+
+  .el-descriptions {
+    --el-descriptions-item-bordered-label-background: var(--background-color-light);
+    
+    .el-descriptions__label {
+      color: var(--text-color-secondary);
+    }
+    
+    .el-descriptions__content {
+      color: var(--text-color);
+    }
+  }
+
+  .el-progress {
+    .el-progress__text {
+      color: var(--text-color);
+    }
+  }
+
+  /* 滚动条样式 */
+  ::-webkit-scrollbar {
+    width: var(--scrollbar-width);
+    height: var(--scrollbar-width);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-thumb-color);
+    border-radius: var(--radius-full);
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: var(--scrollbar-track-color);
+  }
+
+  /* 玻璃态卡片效果 */
+  .glass-effect {
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-backdrop-filter);
+    -webkit-backdrop-filter: var(--glass-backdrop-filter);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+  }
+} 

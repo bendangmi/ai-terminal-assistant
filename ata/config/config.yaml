@@ -1,0 +1,34 @@
+general:
+  working_directory: null
+  history_size: 1000
+  log_level: INFO
+
+security:
+  dangerous_commands:
+    - rm -rf
+    - deltree
+    - format
+    - mkfs
+    - dd
+  sensitive_directories:
+    - /etc
+    - /var
+    - /usr
+    - C:\Windows
+    - C:\Program Files
+  require_confirmation: true
+
+ai:
+  provider: openai
+  model: gpt-3.5-turbo
+  temperature: 0.7
+  max_tokens: 2000
+
+providers:
+  openai:
+    api_key: ""
+    organization: ""
+  azure:
+    api_key: ""
+    endpoint: ""
+    deployment_name: "" 
